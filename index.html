@@ -261,7 +261,81 @@
             80% { transform: translateX(-50%) scale(1.1); }
             100% { transform: translateX(-50%) scale(1); }
         }
+/* Tablet (768px and down) */
+        @media (max-width: 768px) {
+            h1 { font-size: 1.2rem; }
+            .score-box { font-size: 1rem; padding: 4px 10px; }
+            
+            #character-container {
+                width: 200px;
+                height: 220px;
+            }
 
+            #speech-bubble {
+                font-size: 1rem;
+                padding: 15px;
+            }
+
+            canvas {
+                width: 130px;
+                height: 130px;
+            }
+            
+            #counter-area {
+                padding: 10px;
+                gap: 10px;
+            }
+        }
+
+        /* Phone (480px and down) */
+        @media (max-width: 480px) {
+            header { padding: 10px; }
+            h1 { font-size: 1rem; }
+            
+            #customer-area {
+                align-items: flex-end;
+            }
+
+            #character-container {
+                width: 160px;
+                height: 180px;
+            }
+
+            #speech-bubble {
+                top: 10px;
+                font-size: 0.9rem;
+                padding: 10px;
+                width: 90%;
+            }
+
+            .fraction-highlight { font-size: 1.2em; }
+
+            /* Allow counter to scroll horizontally if needed, or wrap nicely */
+            #counter-area {
+                padding: 10px 5px;
+                gap: 5px;
+                /* If we want to prevent wrap and scroll instead: */
+                /* flex-wrap: nowrap; */
+                /* overflow-x: auto; */
+                /* justify-content: flex-start; */
+            }
+
+            /* Make options smaller to fit 2 per row or scroll */
+            .item-option {
+                padding: 5px;
+                border-radius: 10px;
+            }
+
+            canvas {
+                width: 100px;
+                height: 100px;
+            }
+
+            .btn-order {
+                padding: 5px 10px;
+                font-size: 0.8rem;
+            }
+        }
     </style>
 </head>
 <body>
@@ -601,3 +675,4 @@
 </body>
 
 </html>
+
